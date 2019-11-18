@@ -6,9 +6,8 @@ export default function SearchForm(props) {
       <form onSubmit={e => props.handleSearch(e)}>
         <label htmlFor="search">Search: </label>
         <input type="text" id="search" placeholder="henry"></input>
-        <button type="submit" id="search-button">
-          Search
-        </button>
+        <input type="submit" id="search-button" value='Search'>
+        </input>
         <label htmlFor="print-type" alt="print-type">
           Print Type:{" "}
         </label>

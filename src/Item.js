@@ -5,8 +5,8 @@ export default function Item(props) {
     <div className="result-item">
       <h2 className="book-title">{props.bookTitle}</h2>
       <img className="front-cover" href={props.coverImg} alt="book cover" />
-      <p className="author">Author: {props.author}</p>
-      <p className="price">Price: ${props.price}</p>
+      <p className="author"> {props.author}</p>
+      <p className="price">Price:{props.price}</p>
       <p className="desc">{props.desc}</p>
     </div>
   );

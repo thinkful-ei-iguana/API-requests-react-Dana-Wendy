@@ -9,6 +9,9 @@ export default class BookSearch extends React.Component {
     this.state = { results: null };
   }
 
+  componentDidMount(){
+    //fetch results in here
+  }
 
   render() {
     return (

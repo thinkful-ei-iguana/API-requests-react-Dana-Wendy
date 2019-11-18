@@ -8,8 +8,12 @@ export default class BookSearch extends React.Component {
     super();
     this.state = { results: null };
   }
+  handleSearchSubmit(searchTerms) {
+    console.log(`${searchTerms} boo-yah`);
+    // this.setState({ results: event.target.value });
+  }
 
-  componentDidMount(){
+  componentDidMount() {
     //fetch results in here
   }
 
@@ -17,7 +21,7 @@ export default class BookSearch extends React.Component {
     return (
       <main>
         <h1>Google Book Search</h1>
-        <SearchForm></SearchForm>
+        <SearchForm handleSearch={this.handleSearchSubmit}></SearchForm>
         <Results results={this.state.results}></Results>
       </main>
     );

@@ -14,7 +14,7 @@ export default function Results(props) {
         key={r.id}
         coverImg={r.volumeInfo.imageLinks.thumbnail}
         bookTitle={r.volumeInfo.title} //may have a volumeInfo.subtitle
-        author={`Authors: ${!author?'unknown':author.join(', ')}`} //have to deal with an array of authors r.authors
+        author={`Authors: ${!author?'unknown':author.join(', ')}`} // I can use a reduce to do this to insert an ampersand in the end of this line
         desc={r.volumeInfo.description} //assumes all USD
         price={listPrice}
       ></Item>

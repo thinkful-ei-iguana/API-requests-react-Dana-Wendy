@@ -5,17 +5,17 @@ export default function Results(props) {
   if (props.results === null) {
     return <div className="no-results"></div>;
   }
-  const searchResults = props.results.map(r => {
+  let searchResults = props.results.map(r => {
     let listPrice =r.saleInfo.listPrice || 'Free'
     if(listPrice!=='Free') listPrice= `$${listPrice.amount}`;
-    if()
+    let author =r.volumeInfo.authors; 
     return (
       <Item
         key={r.id}
         coverImg={r.volumeInfo.imageLinks.thumbnail}
         bookTitle={r.volumeInfo.title} //may have a volumeInfo.subtitle
-        author={r.volumeInfo.authors[0]} //have to deal with an array of authors r.authors
-        desc={`Author: ${}`} //assumes all USD
+        author={`Authors: ${!author?'unknown':author.join(', ')}`} //have to deal with an array of authors r.authors
+        desc={r.volumeInfo.description} //assumes all USD
         price={listPrice}
       ></Item>
     );

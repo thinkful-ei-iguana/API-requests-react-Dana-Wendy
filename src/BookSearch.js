@@ -29,13 +29,16 @@ export default class BookSearch extends React.Component {
     .map(key => query[key]!==null?`?${key}=${query[key]}`:'').join('');
     console.log(url, ' booyah');
 
-    this.setState({query, results:this.state.results},()=>{
+
         fetch(url)
         .then(res=>res.json())
-        .then(data =>this.setState({results:data.items}))
-      }
-      );
-    //needs to set the state of query
+        .then(data => {
+          if(!data.totalItems) return Promise.reject('no Results');
+          this.setState({query, results:data.items}, ()=> console.log(this.state.results));
+          console.log(data);
+         } )
+        .catch(e=>console.log(e));
+
   }
 
   componentDidMount() {

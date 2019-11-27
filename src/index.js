@@ -1,6 +1,6 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import BookSearch from './BookSearch';
-import './index.css';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
 
-ReactDOM.render(<BookSearch />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById("root"));

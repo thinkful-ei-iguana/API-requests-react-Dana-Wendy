@@ -1,0 +1,13 @@
+.search-form {
+  text-align: center;
+  height: 100%;
+  margin: 10px auto;
+  padding: 5px 5px;
+  max-width: 560px;
+  background-color: gray;
+  display: block;
+}
+
+.filter-options {
+  display: inline-block;
+}

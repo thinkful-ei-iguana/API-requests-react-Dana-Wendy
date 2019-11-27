@@ -1,0 +1,15 @@
+.title {
+  text-align: center;
+}
+
+.author {
+  text-align: center;
+}
+
+.price {
+  text-align: center;
+}
+
+.book-tab-single {
+  float: right;
+}
